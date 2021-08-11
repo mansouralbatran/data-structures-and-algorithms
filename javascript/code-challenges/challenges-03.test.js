@@ -91,23 +91,19 @@ const oddValues = (arr) => {
   ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-
-  let newarr = arr.filter(Element => {
-    for (let i = 0; i < forbiddenValues.length; i++) {
-
-      if (Element.indexOf(forbiddenValues[i])) {
-        return true ;
+  let newarry = [];
+  arr.filter((Element) => {
 
 
-      } console.log( forbiddenValues[i]);
+    if (!forbiddenValues.includes(Element)) {
+      newarry.push(Element);
+
     }
   });
-
-
-  return newarr;
+  return newarry;
   // Solution code here...
-};
 
+};
 /* ------------------------------------------------------------------------------------------------
   CHALLENGE 6 - Stretch Goal
 
@@ -152,22 +148,22 @@ const getBaseStatGreaterThan = (arr, minBaseStat) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 7 - Stretch Goal
+    CHALLENGE 7 - Stretch Goal
 
-  Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 7. For this function, extend your solution from challenge 7 to only return the name of the stat, rather than the entire stat object.
+    Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 7. For this function, extend your solution from challenge 7 to only return the name of the stat, rather than the entire stat object.
 
-  For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
-  ------------------------------------------------------------------------------------------------ */
+    For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
+    ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 8 - Stretch Goal
+    CHALLENGE 8 - Stretch Goal
 
-  Write a function named getCharactersWithoutChildren that, given the array of characters, below, uses filter to return an array of all characters without children.
-  ------------------------------------------------------------------------------------------------ */
+    Write a function named getCharactersWithoutChildren that, given the array of characters, below, uses filter to return an array of all characters without children.
+    ------------------------------------------------------------------------------------------------ */
 
 const characters = [
   {
@@ -217,27 +213,27 @@ const getCharactersWithoutChildren = (arr) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 9 - Stretch Goal
+    CHALLENGE 9 - Stretch Goal
 
-  Write a function named evenOddNumericValues that, given an array as input, uses filter to remove any non-numeric values, then uses map to generate a new array containing the string 'even' or 'odd', depending on the original value.
+    Write a function named evenOddNumericValues that, given an array as input, uses filter to remove any non-numeric values, then uses map to generate a new array containing the string 'even' or 'odd', depending on the original value.
 
-  For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 'odd'].
-  ------------------------------------------------------------------------------------------------ */
+    For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 'odd'].
+    ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
-  TESTS
+    TESTS
 
-  All the code below will verify that your functions are working to solve the challenges.
+    All the code below will verify that your functions are working to solve the challenges.
 
-  DO NOT CHANGE any of the below code.
+    DO NOT CHANGE any of the below code.
 
-  Run your tests from the console: jest challenges-08.test.js
+    Run your tests from the console: jest challenges-08.test.js
 
-  ------------------------------------------------------------------------------------------------ */
+    ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
   test('It should add two to every value', () => {
