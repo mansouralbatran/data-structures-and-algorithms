@@ -25,6 +25,10 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
+  let tolarry= starWarsArr.sort((a,b)=>{
+    return b.height-a.height;
+  });
+  return tolarry;
   // Solution code here...
 };
 
@@ -68,13 +72,14 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  let srti=[];
-  srti = str.split('');
+  let srti=str;
+  for (let i = 0; i <= srti.length; i++) {
+    result.push(str);
+    str=str.slice(1);
 
-  str.split('').map((ele)=>{
+  }
 
 
-  });
   // Solution code here...
   return result;
 };
@@ -88,6 +93,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
+  return arr.split('');
   // Solution code here...
 };
 
